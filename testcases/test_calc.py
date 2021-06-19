@@ -8,7 +8,7 @@ from homework.code.calculator import Calculator
 
 
 # 获取测试数据
-def get_calc_data(n:str):
+def get_calc_data(n : str):
     with open('../data/calc_data.yml', 'r', encoding='utf-8') as c:
         total = yaml.safe_load(c)
     return total.get(n),(b[3] for b in total.get(n))

@@ -49,7 +49,7 @@ div_success:
     - a为0，除以非0外的任意数为0
     - a为整数除以浮点数数b得整数
 
-#iv_faild
+#div_fail
 div_fail:
   datas:
     - [1,0,"ZeroDivisionError"]
