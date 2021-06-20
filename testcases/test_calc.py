@@ -59,8 +59,8 @@ class TestCalculator:
     @allure.step("除法反向用例")
     @pytest.mark.parametrize('a,b,expect', get_calc_data("div_fail")[0], ids=get_calc_data("div_fail")[1])
     def test_div_fail(self,a,b,expect):
-        with pytest.raises(ZeroDivisionError or TypeError) as s:
-            self.calc.add(a, b)
+        with pytest.raises((ZeroDivisionError,TypeError)) as s:
+            self.calc.div(a, b)
             assert expect == str(s.value)
 
 
